@@ -5,6 +5,8 @@ const contacts=[{
     
 }]
 
+const results=document.querySelector('.results')
+
 //declaring the buttons
 
 const fname=document.getElementById('fname')
@@ -33,6 +35,21 @@ if(lname.value&&fname.value){
 })
 
 searchbtn.addEventListener('click', function(){
+
+    if(lname.value&&fname.value){
+        for(contact of contacts){
+            if(fname.value == contact.firstname && lname.value ==contact.lastname){
+                const result=document.createElement('div')
+                
+                const searchresult=`${fname.value} ${lname.value} ${contact.phonenumber}`
+                result.textContent=searchresult
+                results.appendChild(result)
+                console.log(result)
+            }
+        }
+    }else{
+        alert('Please enter first and Last name!')
+    }
 
 })
 
