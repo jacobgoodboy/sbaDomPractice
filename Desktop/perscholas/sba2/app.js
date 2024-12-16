@@ -20,20 +20,23 @@ const addbtn=document.getElementById('addbtn')
 const searchbtn=document.getElementById('searchbtn')
 const addfield=document.getElementById('addnumberfield')
 //declaring some listeners
-fname.addEventListener('change', function (){
-    console.log(' input logging fname')
-    console.log(fname.value)
-})
+// fname.addEventListener('change', function (){
+//     console.log(' input logging fname')
+//     console.log(fname.value)
+// })
 
-lname.addEventListener('change', function (){
-    console.log(' input logging fname')
-    console.log(lname.value)
-})
+// lname.addEventListener('change', function (){
+//     console.log(' input logging fname')
+//     console.log(lname.value)
+// })
+
+
+//add button implementation
 
 addbtn.addEventListener('click', function(){
 if(lname.value&&fname.value){
     const inp=document.createElement('input')
-    
+
     addfield.appendChild(inp)
 
 }else{
@@ -56,7 +59,7 @@ searchbtn.addEventListener('click', function(){
                 results.appendChild(result)
                 lname.value=''
                 fname.value=''
-                
+                return
             }
             else{
                 alert('Contact not found!')
