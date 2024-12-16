@@ -23,4 +23,17 @@ lname.addEventListener('change', function (){
     console.log(lname.value)
 })
 
+addbtn.addEventListener('click', function(){
+if(lname.value&&fname.value){
+    console.log('not empty')
+}else{
+    alert('Please enter first and Last name!')
+}
+
+})
+
+searchbtn.addEventListener('click', function(){
+
+})
+
 
