@@ -6,3 +6,8 @@ const contacts=[{
 }]
 const fname=document.getElementById('fname')
 const lname=document.getElementById('lname')
+
+fname.addEventListener('change', function (){
+    console.log(' input logging fname')
+    console.log(fname.value)
+})
