@@ -9,7 +9,8 @@ const contacts=[{
 
 const fname=document.getElementById('fname')
 const lname=document.getElementById('lname')
-
+const addbtn=document.getElementById('addbtn')
+const searchbtn=document.getElementById('searchbtn')
 
 //declaring some listeners
 fname.addEventListener('change', function (){
