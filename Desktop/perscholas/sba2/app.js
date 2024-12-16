@@ -36,14 +36,27 @@ const addfield=document.getElementById('addnumberfield')
 addbtn.addEventListener('click', function(){
 if(lname.value&&fname.value){
     const inp=document.createElement('input')
-
+    inp.placeholder='Enter the phone number:'
+    inp.type='tel'
     addfield.appendChild(inp)
+    const confirm=document.createElement('button')
+    confirm.textContent='confirm'
+    addfield.append(confirm)
+    confirm.addEventListener('click', function(){
+        const newcontact={
+            firstname:fname.value,
+            lastname:lname.value,
+            phonenumber:inp.value
+        }
+        contacts.push(newcontact)
+    })
 
 }else{
     alert('Please enter first and Last name!')
 }
 
 })
+
 
 //search btn implementation works
 searchbtn.addEventListener('click', function(){
