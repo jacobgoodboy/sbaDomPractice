@@ -35,13 +35,16 @@ const addfield=document.getElementById('addnumberfield')
 
 addbtn.addEventListener('click', function(){
 if(lname.value&&fname.value){
+    //added the input
     const inp=document.createElement('input')
     inp.placeholder='Enter the phone number:'
     inp.type='tel'
     addfield.appendChild(inp)
+    //added confirm button
     const confirm=document.createElement('button')
     confirm.textContent='confirm'
     addfield.append(confirm)
+    //confirm button
     confirm.addEventListener('click', function(){
         const newcontact={
             firstname:fname.value,
@@ -49,7 +52,10 @@ if(lname.value&&fname.value){
             phonenumber:inp.value
         }
         contacts.push(newcontact)
+
+        addfield.innerHTML=''
     })
+    
 
 }else{
     alert('Please enter first and Last name!')
