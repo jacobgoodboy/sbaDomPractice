@@ -3,6 +3,11 @@ const contacts=[{
     lastname:'doe',
     phonenumber:'3124599999'
     
+},
+{
+    firstname:'jane',
+    lastname:'smith',
+    phonenumber:3124449999
 }]
 
 const results=document.querySelector('.results')
@@ -39,12 +44,14 @@ searchbtn.addEventListener('click', function(){
     if(lname.value&&fname.value){
         for(contact of contacts){
             if(fname.value == contact.firstname && lname.value ==contact.lastname){
+                results.removeChild(results.firstChild)
                 const result=document.createElement('div')
                 
                 const searchresult=`${fname.value} ${lname.value} ${contact.phonenumber}`
                 result.textContent=searchresult
                 results.appendChild(result)
-                console.log(result)
+                lname.value=''
+                fname.value=''
             }
         }
     }else{
