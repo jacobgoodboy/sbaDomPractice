@@ -57,11 +57,16 @@ addbtn.addEventListener('click', function () {
         inp.type = 'tel'
         addfield.appendChild(inp)
         //added confirm button
+
         const confirm = document.createElement('button')
         confirm.textContent = 'confirm'
         addfield.append(confirm)
         //confirm button
         confirm.addEventListener('click', function () {
+            if(!inp.value){
+                alert('phone number field is empty')
+                return
+            }
             const newcontact = {
                 firstname: fname.value,
                 lastname: lname.value,
