@@ -18,7 +18,7 @@ const fname=document.getElementById('fname')
 const lname=document.getElementById('lname')
 const addbtn=document.getElementById('addbtn')
 const searchbtn=document.getElementById('searchbtn')
-const addfiel=document.getElementById('addnumberfield')
+const addfield=document.getElementById('addnumberfield')
 //declaring some listeners
 fname.addEventListener('change', function (){
     console.log(' input logging fname')
@@ -40,6 +40,7 @@ if(lname.value&&fname.value){
 
 })
 
+//search btn implementation works
 searchbtn.addEventListener('click', function(){
 
     if(lname.value&&fname.value){
