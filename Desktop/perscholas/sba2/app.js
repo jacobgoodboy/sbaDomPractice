@@ -18,7 +18,7 @@ const fname=document.getElementById('fname')
 const lname=document.getElementById('lname')
 const addbtn=document.getElementById('addbtn')
 const searchbtn=document.getElementById('searchbtn')
-
+const addfiel=document.getElementById('addnumberfield')
 //declaring some listeners
 fname.addEventListener('change', function (){
     console.log(' input logging fname')
@@ -32,7 +32,8 @@ lname.addEventListener('change', function (){
 
 addbtn.addEventListener('click', function(){
 if(lname.value&&fname.value){
-    console.log('not empty')
+    const inp=document.createElement('input')
+
 }else{
     alert('Please enter first and Last name!')
 }
