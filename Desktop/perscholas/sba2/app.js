@@ -11,3 +11,9 @@ fname.addEventListener('change', function (){
     console.log(' input logging fname')
     console.log(fname.value)
 })
+
+lname.addEventListener('change', function (){
+    console.log(' input logging fname')
+    console.log(lname.value)
+})
+
