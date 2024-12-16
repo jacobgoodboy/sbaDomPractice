@@ -33,8 +33,24 @@ const addfield = document.getElementById('addnumberfield')
 
 //add button implementation
 
+function containsContact(fnam,lnam){
+    let contains=false
+    for(contact of contacts){
+        if(contact.firstname.toLowerCase()==fnam.toLowerCase() && contact.lastname.toLowerCase() == lnam.toLowerCase()){
+            contains=true
+            return contains
+        }
+    }
+
+    return contains
+}
+
 addbtn.addEventListener('click', function () {
-    if (lname.value && fname.value) {
+    if (lname.value && fname.value ) {
+        if(containsContact(fname.value,lname.value)){
+            alert('Warning there is already a name like that')
+            return
+        }
         //added the input
         const inp = document.createElement('input')
         inp.placeholder = 'Enter the phone number:'
