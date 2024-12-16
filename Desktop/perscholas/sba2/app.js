@@ -69,6 +69,7 @@ addbtn.addEventListener('click', function () {
 searchbtn.addEventListener('click', function () {
 
     if (lname.value && fname.value) {
+        let contactFound = false;
         for (contact of contacts) {
             if (fname.value == contact.firstname && lname.value == contact.lastname) {
                 results.removeChild(results.firstChild)
@@ -79,15 +80,15 @@ searchbtn.addEventListener('click', function () {
                 results.appendChild(result)
                 lname.value = ''
                 fname.value = ''
+                contactFound = true;
                 break
             }
 
         }
-    } else if (lname.value && fname.value) {
-        alert('Contact not found!')
-    }
-
-    else {
+        if (!contactFound) {
+            alert('Contact not found!');
+        }
+    }else {
         alert('Please enter first and Last name!')
     }
 
