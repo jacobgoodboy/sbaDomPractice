@@ -71,8 +71,10 @@ searchbtn.addEventListener('click', function () {
     if (lname.value && fname.value) {
         let contactFound = false;
         for (contact of contacts) {
-            if (fname.value == contact.firstname && lname.value == contact.lastname) {
-                results.removeChild(results.firstChild)
+            if (fname.value.toLowerCase() == contact.firstname.toLowerCase() && lname.value.toLowerCase() == contact.lastname.toLowerCase()) {
+                if (results.firstChild) {
+                    results.removeChild(results.firstChild);
+                }
                 const result = document.createElement('div')
 
                 const searchresult = `${fname.value} ${lname.value} ${contact.phonenumber}`
