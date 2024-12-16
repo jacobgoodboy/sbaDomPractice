@@ -52,6 +52,10 @@ searchbtn.addEventListener('click', function(){
                 results.appendChild(result)
                 lname.value=''
                 fname.value=''
+                
+            }
+            else{
+                alert('Contact not found!')
             }
         }
     }else{
