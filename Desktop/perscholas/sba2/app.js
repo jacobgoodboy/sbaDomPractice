@@ -33,6 +33,8 @@ lname.addEventListener('change', function (){
 addbtn.addEventListener('click', function(){
 if(lname.value&&fname.value){
     const inp=document.createElement('input')
+    
+    addfield.appendChild(inp)
 
 }else{
     alert('Please enter first and Last name!')
